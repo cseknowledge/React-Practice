@@ -1,8 +1,8 @@
 /*
  * Title: Main Script file
  * Description: A vanilla JS Implementation of a simple Counter that adds 1 to each user click
- * Author: Sumit Saha ( Learn with Sumit )
- * Date: 02/03/2021
+ * Author: Md. Arif Dewan
+ * Date: 03/01/2022
  *
  */
 
