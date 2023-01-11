@@ -1,6 +1,8 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import Card from "./Components/Card";
+import CardFunctional from "./Components/CardFunctional";
+import CardFunctionalBootstrap from "./Components/CardFunctionalBootstrap";
+import CardClass from "./Components/CardClass";
 import CardData from "./Database/CardData.json";
 import { v4 as uuidv4 } from "uuid";
 
@@ -15,20 +17,30 @@ const titleStyle = {
 };
 
 function App() {
-  console.log(CardData);
-  let items = [];
-  // for (let index = 0; index < CardData.length; index++) {
-  //   items.push(
-  //     <Card
-  //       key={index.toString()}
-  //       cardHeader={CardData[index].header}
-  //       cardTitle={CardData[index].title}
-  //       cardText={CardData[index].text}
-  //     />
-  //   );
-  // }
-  items = CardData.map((item, index) => (
-    <Card
+  let itemsClassBootstrap = [];
+  let itemsFunctional = [];
+  let itemsClass = [];
+
+  itemsClassBootstrap = CardData.map((item, index) => (
+    <CardFunctionalBootstrap
+      key={uuidv4()}
+      cardHeader={item.header}
+      cardTitle={item.title}
+      cardText={item.text}
+    />
+  ));
+
+  itemsFunctional = CardData.map((item, index) => (
+    <CardFunctional
+      key={uuidv4()}
+      cardHeader={item.header}
+      cardTitle={item.title}
+      cardText={item.text}
+    />
+  ));
+
+  itemsClass = CardData.map((item, index) => (
+    <CardClass
       key={uuidv4()}
       cardHeader={item.header}
       cardTitle={item.title}
@@ -39,10 +51,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 style={titleStyle}>{title}</h1>
-        <div className="row">{items}</div>
-        <div className="row" style={{ color: "white" }}>
-          Nested List
-        </div>
+        <p style={{ color: "white" }}>Functional Components with Bootstrap</p>
+        <div className="row">{itemsClassBootstrap}</div>
+        <hr />
+        <p style={{ color: "white" }}>Functional Components</p>
+        <div className="row">{itemsFunctional}</div>
+        <hr />
+        <p style={{ color: "white" }}>Class Components</p>
+        <div className="row">{itemsClass}</div>
       </header>
     </div>
   );
