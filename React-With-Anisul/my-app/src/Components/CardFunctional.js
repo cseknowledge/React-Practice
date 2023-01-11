@@ -1,4 +1,4 @@
-function Card(props) {
+function CardFunctional(props) {
   const { cardHeader, cardTitle, cardText } = props;
   return (
     <div className="col-sm-3 ">
@@ -17,4 +17,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default CardFunctional;
