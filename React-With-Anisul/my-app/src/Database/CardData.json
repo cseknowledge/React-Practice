@@ -1,0 +1,27 @@
+[
+    {
+        "header": "Featured",
+        "title": "Call Home",
+        "text": "Card descriptiom one"
+    },
+    {
+        "header": "Featured",
+        "title": "Call Father",
+        "text": "Card descriptiom two"
+    },
+    {
+        "header": "Featured",
+        "title": "Call Mother",
+        "text": "Card descriptiom three"
+    },
+    {
+        "header": "Special",
+        "title": "Call Wife",
+        "text": "Card descriptiom four"
+    },
+    {
+        "header": "Special",
+        "title": "Call Daughter",
+        "text": "Card descriptiom five"
+    }
+]
