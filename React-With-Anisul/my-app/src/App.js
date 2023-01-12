@@ -2,6 +2,8 @@
 import "./App.css";
 import CardFunctional from "./Components/CardFunctional";
 import CardFunctionalBootstrap from "./Components/CardFunctionalBootstrap";
+import CountStateClass from "./Components/CountStateClass";
+import CountStateFunction from "./Components/CountStateFunction";
 import CardClass from "./Components/CardClass";
 import CardData from "./Database/CardData.json";
 import { v4 as uuidv4 } from "uuid";
@@ -51,6 +53,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 style={titleStyle}>{title}</h1>
+        <p style={{ color: "white" }}>Count Using Function State</p>
+        <div className="row">
+          <CountStateFunction />
+        </div>
+        <p style={{ color: "white" }}>Count Using Class State</p>
+        <div className="row">
+          <CountStateClass />
+        </div>
         <p style={{ color: "white" }}>Functional Components with Bootstrap</p>
         <div className="row">{itemsClassBootstrap}</div>
         <hr />
