@@ -6,6 +6,7 @@ import CountStateClass from "./Components/CountStateClass";
 import CountStateFunction from "./Components/CountStateFunction";
 import CardClass from "./Components/CardClass";
 import CardData from "./Database/CardData.json";
+import Form from "./Components/Form";
 import { v4 as uuidv4 } from "uuid";
 
 const title = "My React App";
@@ -53,6 +54,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 style={titleStyle}>{title}</h1>
+        <p style={{ color: "white" }}>From Manipulate</p>
+        <div className="row">
+          <Form />
+        </div>
         <p style={{ color: "white" }}>Count Using Function State</p>
         <div className="row">
           <CountStateFunction />
